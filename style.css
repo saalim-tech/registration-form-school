@@ -66,7 +66,7 @@ body{
 
     width:100%;
 
-    max-width:1000px;
+   max-width:850px;
 
     background:#1e293b;
 
@@ -79,6 +79,16 @@ body{
     box-shadow:
 
     0 20px 40px rgba(0,0,0,.45);
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+.registration-card:hover{
+
+    transform:translateY(-3px);
 
 }
 /* ===========================
@@ -138,7 +148,7 @@ section{
 
     padding:25px;
 
-    margin-bottom:30px;
+   margin-bottom:35px;
 
     transition:.3s;
 
@@ -155,6 +165,12 @@ section:hover{
 section h2{
 
     color:var(--primary);
+
+    font-size:24px;
+
+    border-bottom:2px solid #334155;
+
+    padding-bottom:12px;
 
     margin-bottom:25px;
 
@@ -190,9 +206,11 @@ textarea{
 
     border-radius:10px;
 
-    font-size:15px;
+    font-size:16px;
 
     transition:.35s ease;
+
+
 
 }
 
@@ -213,7 +231,10 @@ textarea:focus{
 
     outline:none;
 
+    transform:scale(1.01);
+
 }
+
 /* ===========================
    BUTTONS
 =========================== */
@@ -232,7 +253,7 @@ textarea:focus{
 
 button{
 
-    padding:15px 28px;
+    padding:12px 24px;
 
     border:none;
 
@@ -305,13 +326,19 @@ button{
 
 }
 
+/* ===========================
+   RADIO GROUP
+=========================== */
+
 .radio-group{
 
     display:flex;
 
-    gap:30px;
+    gap:25px;
 
     margin-top:10px;
+
+    flex-wrap:wrap;
 
 }
 
@@ -325,6 +352,26 @@ button{
 
     margin:0;
 
+    width:auto;
+
+    cursor:pointer;
+
+}
+
+.radio-group input[type="radio"]{
+
+    width:18px;
+
+    height:18px;
+
+    margin:0;
+
+    accent-color:var(--primary);
+
+    cursor:pointer;
+
+    box-shadow:none;
+
 }
 /* ===========================
    CHECKBOX GROUP
@@ -336,7 +383,9 @@ button{
 
     flex-wrap:wrap;
 
-    gap:20px;
+    align-items:center;
+
+    gap:14px 28px;
 
     margin-top:10px;
 
@@ -344,13 +393,55 @@ button{
 
 .checkbox-group label{
 
-    display:flex;
+    display:inline-flex;
 
     align-items:center;
 
     gap:8px;
 
+    width:auto;
+
+    flex:none;
+
     margin:0;
+
+    cursor:pointer;
+
+    white-space:nowrap;
+
+}
+
+.checkbox-group input[type="checkbox"]{
+
+    appearance:auto;
+
+    width:18px;
+
+    height:18px;
+
+    margin:0;
+
+    padding:0;
+
+    border:none;
+
+    background:none;
+
+    box-shadow:none;
+
+    accent-color:var(--primary);
+
+    cursor:pointer;
+
+    transform:none;
+
+}
+
+.checkbox-group input[type="checkbox"]:focus{
+
+    outline:none;
+
+    box-shadow:0 0 6px rgba(59,130,246,.45);
 
 }
 /* ===========================
@@ -399,7 +490,7 @@ button{
 
     color:white;
 
-    padding:14px 28px;
+   padding:12px 24px;
 
     border:none;
 
@@ -429,7 +520,7 @@ button{
 
     color:white;
 
-    padding:14px 28px;
+    padding:12px 24px;
 
     border:none;
 
@@ -476,5 +567,21 @@ button{
         width:100%;
 
     }
+
+}
+html{
+
+    scroll-behavior:smooth;
+
+}
+footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    color:#94a3b8;
+
+    font-size:14px;
 
 }
