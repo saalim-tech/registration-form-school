@@ -188,9 +188,9 @@ label{
    INPUTS
 =========================== */
 
-input,
+input:not([type="checkbox"]):not([type="radio"]),
 select,
-textarea{
+textarea
 
     width:100%;
 
@@ -334,11 +334,11 @@ button{
 
     display:flex;
 
-    gap:25px;
-
-    margin-top:10px;
-
     flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:12px;
 
 }
 
@@ -350,11 +350,11 @@ button{
 
     gap:8px;
 
-    margin:0;
+    cursor:pointer;
 
     width:auto;
 
-    cursor:pointer;
+    margin:0;
 
 }
 
@@ -368,10 +368,6 @@ button{
 
     accent-color:var(--primary);
 
-    cursor:pointer;
-
-    box-shadow:none;
-
 }
 /* ===========================
    CHECKBOX GROUP
@@ -379,41 +375,35 @@ button{
 
 .checkbox-group{
 
-    display:flex;
+    display:grid;
 
-    flex-wrap:wrap;
+    grid-template-columns:repeat(2,max-content);
 
-    align-items:center;
+    gap:14px 30px;
 
-    gap:14px 28px;
-
-    margin-top:10px;
+    margin-top:12px;
 
 }
 
 .checkbox-group label{
 
-    display:inline-flex;
+    display:flex;
 
     align-items:center;
 
     gap:8px;
 
-    width:auto;
-
-    flex:none;
+    cursor:pointer;
 
     margin:0;
 
-    cursor:pointer;
+    padding:0;
 
-    white-space:nowrap;
+    width:auto;
 
 }
 
 .checkbox-group input[type="checkbox"]{
-
-    appearance:auto;
 
     width:18px;
 
@@ -421,27 +411,9 @@ button{
 
     margin:0;
 
-    padding:0;
-
-    border:none;
-
-    background:none;
-
-    box-shadow:none;
-
     accent-color:var(--primary);
 
     cursor:pointer;
-
-    transform:none;
-
-}
-
-.checkbox-group input[type="checkbox"]:focus{
-
-    outline:none;
-
-    box-shadow:0 0 6px rgba(59,130,246,.45);
 
 }
 /* ===========================
