@@ -302,53 +302,219 @@
 
 
 
-                <!-- =========================
-     Additional Details
-========================= -->
-
                 <section>
 
                     <h2>📋 Additional Details</h2>
 
-                    <label for="blood-group">Blood Group</label>
-                    <select id="blood-group" name="blood-group" required>
+                    <div class="form-group">
 
-                        <option value="">-- Select Blood Group --</option>
-                        <option>A+</option>
-                        <option>A-</option>
-                        <option>B+</option>
-                        <option>B-</option>
-                        <option>AB+</option>
-                        <option>AB-</option>
-                        <option>O+</option>
-                        <option>O-</option>
+                        <label for="blood-group">Blood Group</label>
 
-                    </select>
+                        <select id="blood-group" name="blood-group" required>
 
-                    <label>Hobbies</label>
+                            <option value="">-- Select Blood Group --</option>
 
-                    <input type="checkbox" id="reading" name="hobbies" value="Reading">
-                    <label for="reading">Reading</label>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
 
-                    <input type="checkbox" id="sports" name="hobbies" value="Sports">
-                    <label for="sports">Sports</label>
+                        </select>
 
-                    <input type="checkbox" id="music" name="hobbies" value="Music">
-                    <label for="music">Music</label>
+                    </div>
 
-                    <input type="checkbox" id="coding" name="hobbies" value="Coding">
-                    <label for="coding">Coding</label>
+                    <div class="form-group">
 
-                    <label for="photo">Passport Size Photo</label>
-                    <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required>
+                        <label>Hobbies</label>
 
-                    <label for="about">About Yourself</label>
-                    <textarea id="about" name="about" rows="5"
-                        placeholder="Tell us something about yourself..."></textarea>
+                        <div class="checkbox-group">
+
+                            <label>
+
+                                <input type="checkbox" id="reading" name="hobbies" value="Reading">
+
+                                Reading
+
+                            </label>
+
+                            <label>
+
+                                <input type="checkbox" id="sports" name="hobbies" value="Sports">
+
+                                Sports
+
+                            </label>
+
+                            <label>
+
+                                <input type="checkbox" id="music" name="hobbies" value="Music">
+
+                                Music
+
+                            </label>
+
+                            <label>
+
+                                <input type="checkbox" id="coding" name="hobbies" value="Coding">
+
+                                Coding
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="about">
+
+                            About Yourself
+
+                        </label>
+
+                        <div id="readingFields" class="extra-fields" style="display:none;">
+
+                            <div class="row">
+
+                                <div class="form-group">
+
+                                    <label for="book">
+
+                                        Book You Enjoy Most
+
+                                    </label>
+
+                                    <input type="text" id="book" name="book" placeholder="Enter your favorite book">
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="author">
+
+                                        Author You Admire
+
+                                    </label>
+
+                                    <input type="text" id="author" name="author"
+                                        placeholder="Enter your favorite author">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="sportsFields" class="extra-fields" style="display:none;">
+
+                            <div class="row">
+
+                                <div class="form-group">
+
+                                    <label for="sport">
+
+                                        Sport You Like Most
+
+                                    </label>
+
+                                    <input type="text" id="sport" name="sport" placeholder="Enter your favorite sport">
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="player">
+
+                                        Sports Idol
+
+                                    </label>
+
+                                    <input type="text" id="player" name="player"
+                                        placeholder="Enter your favorite player">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="musicFields" class="extra-fields" style="display:none;">
+
+                            <div class="row">
+
+                                <div class="form-group">
+
+                                    <label for="artist">
+
+                                        Artist You Listen To Most
+
+                                    </label>
+
+                                    <input type="text" id="artist" name="artist" placeholder="Enter artist name">
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="song">
+
+                                        Song You Never Skip
+
+                                    </label>
+
+                                    <input type="text" id="song" name="song" placeholder="Enter song name">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div id="codingFields" class="extra-fields" style="display:none;">
+
+                            <div class="row">
+
+                                <div class="form-group">
+
+                                    <label for="language">
+
+                                        Programming Language
+
+                                    </label>
+
+                                    <input type="text" id="language" name="language"
+                                        placeholder="e.g. JavaScript, Python, C++">
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="editor">
+
+                                        Code Editor
+
+                                    </label>
+
+                                    <input type="text" id="editor" name="editor"
+                                        placeholder="e.g. VS Code, IntelliJ IDEA">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <textarea id="about" name="about" rows="5"
+                            placeholder="Tell us something about yourself..."></textarea>
+
+                    </div>
 
                 </section>
-
-
 
                 <!-- =========================
      Declaration & Buttons
