@@ -188,15 +188,15 @@ label{
    INPUTS
 =========================== */
 
-input:not([type="checkbox"]):not([type="radio"]),
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
 select,
-textarea
+textarea{
 
     width:100%;
 
     padding:14px 18px;
 
-    margin-top:6px;
+   margin-top:8px;
 
     background:#0f172a;
 
@@ -210,8 +210,6 @@ textarea
 
     transition:.35s ease;
 
-
-
 }
 
 input::placeholder,
@@ -221,15 +219,15 @@ textarea::placeholder{
 
 }
 
-input:focus,
+input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):focus,
 select:focus,
 textarea:focus{
+
+    outline:none;
 
     border-color:var(--primary);
 
     box-shadow:0 0 15px rgba(59,130,246,.45);
-
-    outline:none;
 
     transform:scale(1.01);
 
@@ -312,17 +310,17 @@ button{
 
     gap:20px;
 
-    margin-bottom:20px;
+    align-items:flex-start;
 
 }
 
 .form-group{
 
-    flex:1;
-
     display:flex;
 
     flex-direction:column;
+
+    margin-bottom:24px;
 
 }
 
@@ -344,17 +342,17 @@ button{
 
 .radio-group label{
 
-    display:flex;
+    display:inline-flex;
 
     align-items:center;
 
     gap:8px;
 
+    margin:0;
+
     cursor:pointer;
 
     width:auto;
-
-    margin:0;
 
 }
 
@@ -366,40 +364,43 @@ button{
 
     margin:0;
 
+    padding:0;
+
     accent-color:var(--primary);
 
 }
 /* ===========================
    CHECKBOX GROUP
 =========================== */
-
 .checkbox-group{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:repeat(2,max-content);
+    flex-wrap:wrap;
 
-    gap:14px 30px;
+    gap:16px 30px;
 
     margin-top:12px;
+
+    margin-bottom:28px;
 
 }
 
 .checkbox-group label{
 
-    display:flex;
+    display:inline-flex;
 
     align-items:center;
 
     gap:8px;
 
-    cursor:pointer;
-
     margin:0;
 
-    padding:0;
+    cursor:pointer;
 
     width:auto;
+
+    white-space:nowrap;
 
 }
 
@@ -411,9 +412,23 @@ button{
 
     margin:0;
 
+    padding:0;
+
     accent-color:var(--primary);
 
     cursor:pointer;
+
+    outline:none;
+
+    box-shadow:none;
+
+}
+
+.checkbox-group input[type="checkbox"]:focus{
+
+    outline:none;
+
+    box-shadow:none;
 
 }
 /* ===========================
@@ -434,87 +449,18 @@ button{
 
 }
 
-.declaration input{
+.declaration input[type="checkbox"]{
+
+    width:18px;
+
+    height:18px;
 
     margin-top:4px;
 
-}
-
-/* ===========================
-   BUTTONS
-=========================== */
-
-.button-group{
-
-    display:flex;
-
-    justify-content:flex-end;
-
-    gap:15px;
-
-    margin-top:25px;
+    accent-color:var(--primary);
 
 }
 
-.submit-btn{
-
-    background:var(--primary);
-
-    color:white;
-
-   padding:12px 24px;
-
-    border:none;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-}
-
-.submit-btn:hover{
-
-    background:var(--primary-hover);
-
-    transform:translateY(-2px);
-
-}
-
-.reset-btn{
-
-    background:#475569;
-
-    color:white;
-
-    padding:12px 24px;
-
-    border:none;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-}
-
-.reset-btn:hover{
-
-    background:#64748b;
-
-    transform:translateY(-2px);
-
-}
 /* ===========================
    RESPONSIVE
 =========================== */
@@ -555,5 +501,54 @@ footer{
     color:#94a3b8;
 
     font-size:14px;
+
+}
+/* ===========================
+   EXTRA HOBBY QUESTIONS
+=========================== */
+
+.extra-fields{
+
+    display:none;
+
+    margin-top:10px;
+
+    margin-bottom:10px;
+
+    padding:18px;
+
+    background:#111827;
+
+    border:2px solid var(--border);
+
+    border-radius:12px;
+
+    animation:fadeIn .35s ease;
+
+}
+
+.extra-fields .row{
+
+    margin-bottom:0;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }
